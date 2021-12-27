@@ -43,6 +43,7 @@ function changeTabPanel(e) {
     
     const tabContainer = targetTab.parentNode;
     const mainContainer = tabContainer.parentNode;
+    console.log(tabContainer);
     
     tabContainer
         .querySelector('[aria-selected="true"]')
