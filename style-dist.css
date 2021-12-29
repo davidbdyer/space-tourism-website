@@ -1,5 +1,5 @@
 /* ------------------- */
-/* Custom properties   */
+/* Custom properties */
 /* ------------------- */
 
 :root {
@@ -63,10 +63,7 @@ body,
 h1,
 h2,
 h3,
-h4,
-h5,
 p,
-figure,
 picture {
 	margin: 0;
 }
@@ -74,9 +71,6 @@ picture {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p {
 	font-weight: 400;
 }
@@ -91,6 +85,7 @@ body {
 	min-height: 100vh;
 
 	display: grid;
+	grid-template-rows: -webkit-min-content 1fr;
 	grid-template-rows: min-content 1fr;
 
 	overflow-x: hidden;
@@ -103,10 +98,8 @@ picture {
 }
 
 /* make form elements easier to work with */
-input,
-button,
-textarea,
-select {
+
+button {
 	font: inherit;
 }
 
@@ -116,7 +109,9 @@ select {
 	*,
 	*::before,
 	*::after {
+		-webkit-animation-duration: 0.01ms !important;
 		animation-duration: 0.01ms !important;
+		-webkit-animation-iteration-count: 1 !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
@@ -140,21 +135,12 @@ select {
 	flex-direction: column;
 }
 
-.grid {
-	display: grid;
-	gap: var(--gap, 1rem);
-}
-
 .d-block {
 	display: block;
 }
 
 .flow > *:where(:not(:first-child)) {
 	margin-top: var(--flow-space, 1rem);
-}
-
-.flow--space--small {
-	--flow-space: .5rem;
 }
 
 .container {
@@ -186,11 +172,15 @@ select {
 	padding: .5em 1em;
 	margin-inline: auto;
 	border-radius: 0 0 .5em .5em;
+	-webkit-transform: translateY(-100%);
 	transform: translateY(-100%);
+	transition: -webkit-transform 25ms ease-in;
 	transition: transform 25ms ease-in;
+	transition: transform 25ms ease-in, -webkit-transform 25ms ease-in;
 }
 
 .skip-to-content:focus {
+	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }
 
@@ -230,10 +220,6 @@ select {
 	font-family: var(--ff-sans-cond);
 }
 
-.ff-sans-normal {
-	font-family: var(--ff-sans-normal);
-}
-
 .letter-spacing-1 {
 	letter-spacing: 4.75px;
 }
@@ -268,10 +254,6 @@ select {
 
 .fs-500 {
 	font-size: var(--fs-500);
-}
-
-.fs-400 {
-	font-size: var(--fs-400);
 }
 
 .fs-300 {
@@ -326,12 +308,15 @@ select {
 	background: hsl(var(--clr-white) / 0.1);
 	border-radius: 50%;
 	opacity: 0;
+	transition: opacity 500ms linear, -webkit-transform 750ms ease-in-out;
 	transition: opacity 500ms linear, transform 750ms ease-in-out;
+	transition: opacity 500ms linear, transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
 }
 
 .large-button:hover::after,
 .large-button:focus::after {
 	opacity: 1;
+	-webkit-transform: scale(1.5);
 	transform: scale(1.5);
 }
 
@@ -366,9 +351,10 @@ select {
 	display: none;
 }
 
-@supports (backdrop-filter: blur(2rem)) {
+@supports ((-webkit-backdrop-filter: blur(2rem)) or (backdrop-filter: blur(2rem))) {
 	.primary-navigation {
 		background: hsl(var(--clr-white) / 0.04);
+		-webkit-backdrop-filter: blur(2rem);
 		backdrop-filter: blur(2rem);
 	}
 }
@@ -383,8 +369,11 @@ select {
 		padding: min(20rem, 15vh) 2rem;
 		margin: 0;
 		flex-direction: column;
+		-webkit-transform: translateX(100%);
 		transform: translateX(100%);
+		transition: -webkit-transform 500ms ease-in-out;
 		transition: transform 500ms ease-in-out;
+		transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 	}
 
 	.primary-navigation.underline-indicators > .active {
@@ -500,10 +489,12 @@ select {
 	border: 1px solid hsl(var(--clr-white) / 1);
 	border-radius: 50%;
 	flex-direction: column;
-	aspect-ratio: 1;
-	width: 2.5em;
 	flex-basis: 2.5em;
+	width: 2.5em;
+	height: 2.5em;
+	aspect-ratio: 1;
 	place-items: center;
+	line-height: 2.3em;
 	color: hsl(var(--clr-white) / 1);
 	background-color: unset;
 }
@@ -738,6 +729,8 @@ body {
 @media (min-width: 1440px) {
 	.grid-container {
 		text-align: left;
+		-webkit-column-gap: var(--container-gap, 2rem);
+		-moz-column-gap: var(--container-gap, 2rem);
 		column-gap: var(--container-gap, 2rem);
 		grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
 	}
@@ -812,3 +805,4 @@ body {
 	}
 
 }
+/*# sourceMappingURL=style-dist.css.map */
