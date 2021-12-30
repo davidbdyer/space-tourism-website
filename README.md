@@ -29,10 +29,12 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/davidbdeath/space-tourism-website)
-- Live Site URL: [Add live site URL here](https://davidbdeath.github.io/space-tourism-website/)
+- Solution URL: [GitHub](https://github.com/davidbdeath/space-tourism-website)
+- Live Site URL: [Space Tourism Site](https://davidbdeath.github.io/space-tourism-website/)
 
 ## My process
+
+I approached implementing this site using Javascript to toggle content visibility instead of creating a new HTML document for sub-page content. The content change controls for each page are done using the ARIA tablist. As a result, the page is screen reader-friendly.
 
 ### Built with
 
@@ -45,8 +47,6 @@ Users should be able to:
 ### What I learned
 
 I learn CSS Grid and expanded my knowledge of Aria for accessibility.
-
-To see how you can add code snippets, see below:
 
 ## Author
 
