@@ -1,6 +1,6 @@
 <?php
 $page_name = "Home";
-require './partials/head.php';
+require_once './partials/head.php';
 ?>
 
 <body class="home">
@@ -10,15 +10,7 @@ require './partials/head.php';
         <div>
             <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
         </div>
-        <button type="button" title="menu" aria-label="menu" aria-controls="primary-navigation" aria-hidden="true" class="mobile-nav-toggle"></button>
-        <nav>
-            <ul id="primary-navigation" class="primary-navigation underline-indicators flex">
-                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.php"><span aria-hidden="true">00</span>Home</a></li>
-                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a></li>
-                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a></li>
-                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a></li>
-            </ul>
-        </nav>
+        <?php require './partials/nav.php'; ?>
     </header>
 
     <main id="main" class="grid-container grid-container--home">
