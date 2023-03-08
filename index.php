@@ -28,7 +28,7 @@
 				</p>
 			</div>
 			<div>
-				<a class="large-button uppercase ff-serif fs-600 text-dark bg-white" href="destination.html">Explore</a>
+				<a class="large-button uppercase ff-serif fs-600 text-dark bg-white" href="./destination.php">Explore</a>
 			</div>
 		</main>
 	</body>
