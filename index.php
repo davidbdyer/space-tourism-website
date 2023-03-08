@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style-dist.css">
-
-    <title>Space Tourism - Home</title>
-
-</head>
+<?php
+$page_name = "Home";
+require './partials/head.php';
+?>
 
 <body class="home">
     <a class="skip-to-content" href="#main">Skip to content</a>
@@ -26,10 +10,10 @@
         <div>
             <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
         </div>
-        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+        <button type="button" title="menu" aria-label="menu" aria-controls="primary-navigation" aria-hidden="true" class="mobile-nav-toggle"></button>
         <nav>
             <ul id="primary-navigation" class="primary-navigation underline-indicators flex">
-                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a></li>
+                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.php"><span aria-hidden="true">00</span>Home</a></li>
                 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a></li>
                 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a></li>
                 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a></li>
@@ -50,7 +34,6 @@
             <a class="large-button uppercase ff-serif fs-600 text-dark bg-white" href="destination.html">Explore</a>
         </div>
     </main>
-    <script src="navigation.js"></script>
 </body>
 
 </html>

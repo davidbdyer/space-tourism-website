@@ -1,0 +1,21 @@
+.logo {
+	margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header {
+	justify-content: space-between;
+	align-items: center;
+
+	@media (min-width: 1440px) {
+		&::after {
+			content: '';
+			display: block;
+			position: relative;
+			height: 1px;
+			width: 100%;
+			margin-right: -2.5rem;
+			background: hsl(var(--clr-white) / .25);
+			order: 1;
+		}
+	}
+}
