@@ -48,7 +48,7 @@
 			</div>
 
 			<!-- the moon -->
-			<article class="destination-info flow" id="moon-tab" tabindex="0" role="tabpanel">
+			<div class="destination-info flow" id="moon-tab" tabindex="0" role="tabpanel">
 				<h2 class="fs-800 uppercase ff-serif">Moon</h2>
 				<p>
 					See our planet as you’ve never seen it before. A perfect relaxing trip away to help
@@ -65,10 +65,10 @@
 						<p class="fs-500 ff-serif uppercase">3 days</p>
 					</div>
 				</div>
-			</article>
+			</div>
 
 			<!-- mars -->
-			<article hidden class="destination-info flow" id="mars-tab" tabindex="0" role="tabpanel">
+			<div hidden class="destination-info flow" id="mars-tab" tabindex="0" role="tabpanel">
 				<h2 class="fs-800 uppercase ff-serif">Mars</h2>
 				<p>
 					Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons,
@@ -85,10 +85,10 @@
 						<p class="fs-500 ff-serif uppercase">9 months</p>
 					</div>
 				</div>
-			</article>
+			</div>
 
 			<!-- europa -->
-			<article hidden class="destination-info flow" id="europa-tab" tabindex="0" role="tabpanel">
+			<div hidden class="destination-info flow" id="europa-tab" tabindex="0" role="tabpanel">
 				<h2 class="fs-800 uppercase ff-serif">Europa</h2>
 				<p>
 					The smallest of the four Galilean moons orbiting Jupiter, Europa is a
@@ -106,10 +106,10 @@
 						<p class="fs-500 ff-serif uppercase">3 years</p>
 					</div>
 				</div>
-			</article>
+			</div>
 
 			<!-- titan -->
-			<article hidden class="destination-info flow" id="titan-tab" tabindex="0" role="tabpanel">
+			<div hidden class="destination-info flow" id="titan-tab" tabindex="0" role="tabpanel">
 				<h2 class="fs-800 uppercase ff-serif">Titan</h2>
 				<p>
 					The only moon known to have a dense atmosphere other than Earth, Titan
@@ -126,7 +126,7 @@
 						<p class="fs-500 ff-serif uppercase">7 years</p>
 					</div>
 				</div>
-			</article>
+			</div>
 
 		</main>
 	</body>
