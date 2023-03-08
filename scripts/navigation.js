@@ -13,15 +13,3 @@ mobileNavToggle.addEventListener('click', () => {
 		mobileNavIcon.backgroundImage = 'url("../assets/shared/icon-hamburger.svg")';
 	}
 });
-
-// mobileNavToggle.addEventListener('click', () => {
-//     if (primaryNav.transform === 'translateX(100%)') {
-//         primaryNav.transform = 'translateX(0)'
-//         mobileNavToggle.ariaHidden = 'true';
-//         mobileNavIcon.backgroundImage = 'url("../assets/shared/icon-close.svg")'
-//     } else {
-//         primaryNav.transform = 'translateX(100%)'
-//         mobileNavToggle.ariaHidden = 'false';
-//         mobileNavIcon.backgroundImage = 'url("../assets/shared/icon-hamburger.svg")'
-//     }
-// })
